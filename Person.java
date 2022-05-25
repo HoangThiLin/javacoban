@@ -1,27 +1,43 @@
+package Model;
+
+import java.util.Date;
 
 public abstract class Person {
-     protected String gioiTinh;
-     protected int namSinnh;
-	public Person(String gioiTinh, int namSinnh) {
-		this.gioiTinh = gioiTinh;
-		this.namSinnh = namSinnh;
+    protected String fullName;
+    protected Date birthday ;
+    protected Boolean gender;
+	public String getFullName() {
+		return fullName;
 	}
-	public String getGioiTinh() {
-		return gioiTinh;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
-	public void setGioiTinh(String gioiTinh) {
-		this.gioiTinh = gioiTinh;
+	public Date getBirthday() {
+		return birthday;
 	}
-	public int getNamSinnh() {
-		return namSinnh;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
-	public void setNamSinnh(int namSinnh) {
-		this.namSinnh = namSinnh;
+	public Boolean getGender() {
+		return gender;
+	}
+	public void setGender(Boolean gender) {
+		this.gender = gender;
+	}
+	public Person(String fullName, Date birthday, Boolean gender) {
+		super();
+		this.fullName = fullName;
+		this.birthday = birthday;
+		this.gender = gender;
+	}
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "Person [gioiTinh=" + gioiTinh + ", namSinnh=" + namSinnh + "]";
+		// TODO Auto-generated method stub
+		return super.toString();
 	}
-	
-     
+    
 }
